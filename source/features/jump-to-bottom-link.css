@@ -1,0 +1,3 @@
+#rgh-jump-to-bottom-link {
+	display: inline-block; /* Avoid breaking link in two lines */
+}

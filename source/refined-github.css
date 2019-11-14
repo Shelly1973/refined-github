@@ -43,6 +43,11 @@
 	margin-left: 0;
 }
 
+/* Hide PR/Issue deleted events */
+.discussion-item-comment_deleted {
+	display: none;
+}
+
 /* Hide `New pull request button` near file list */
 .file-navigation .new-pull-request-btn {
 	display: none;

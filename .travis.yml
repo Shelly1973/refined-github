@@ -1,0 +1,17 @@
+language: node_js
+node_js:
+  - 11 # https://github.com/sindresorhus/refined-github/issues/2900
+env:
+  - EXTENSION_ID=fdghcpegbbeplbeidaofnojniplcpffh
+deploy:
+  - provider: script
+    skip_cleanup: true
+    script: npm run release
+    on:
+      tags: true
+  - provider: script
+    skip_cleanup: true
+    script: npm run-s && npm run build && npm run update-version && npm run save-url && npm run release:cws    
+    on:
+      # Set to deploy on: cron with recent commits
+      branch: master
